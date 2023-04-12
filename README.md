@@ -15,9 +15,9 @@ https://dev.mysql.com/doc/connector-python/en/connector-python-example-connectin
 ## Create a file called 'config.ini' in your copy of this folder
 It is ignored in the .gitignore folder, so you can put your passwords and secrets there, and it won't get pushed to github.
 
-## Run the test file
+## Run the respective files
 ```
-python test.py
+python _______.py
 ```
 It should create a table, insert some rows, delete a row, read the remaining rows, put the data into an array of dictionary items, and then convert that array to JSON and print it out to the screen.
 
