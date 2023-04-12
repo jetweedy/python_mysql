@@ -7,6 +7,8 @@ You won't be able to push code up to it, so you'll probably want to fork your ow
 ## Install the Python MySQL Connector Module
 ```
 pip install mysql-connector-python
+or
+pip install PyMySQL
 ```
 
 ## Review this documentation:
