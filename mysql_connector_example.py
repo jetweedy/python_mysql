@@ -9,10 +9,10 @@ mydb = mysql.connector.connect(user=cfg["db"]["user"],
                                     host=cfg["db"]["host"],
                                     database=cfg["db"]["database"])
 cs = mydb.cursor()
-cs.execute("CREATE TABLE IF NOT EXISTS geekstudent (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, label VARCHAR(200));")
-statement = "INSERT INTO geekstudent(label) VALUES('Shoit')"
+cs.execute("CREATE TABLE IF NOT EXISTS testable (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, label VARCHAR(200));")
+statement = "INSERT INTO testable(label) VALUES('Shoit')"
 cs.execute(statement)
-mydb.commit()
+#mydb.commit()
 print(cs.rowcount, " record(s) added")
 print(cs.lastrowid)
 exit()
@@ -24,6 +24,16 @@ exit()
 
 
 
+
+
+
+
+
+
+
+
+
+"""
 
 #### Let's import a json module so we can create JSON strings from our data later:
 import json
@@ -90,3 +100,5 @@ print(output)
 
 #### Close the connection using this code:
 cnx.close()
+
+"""
