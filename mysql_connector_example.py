@@ -1,4 +1,30 @@
 
+import configparser
+cfg = configparser.ConfigParser()
+cfg.read('config.ini')
+
+import mysql.connector
+mydb = mysql.connector.connect(user=cfg["db"]["user"], 
+                                    password=cfg["db"]["password"],
+                                    host=cfg["db"]["host"],
+                                    database=cfg["db"]["database"])
+cs = mydb.cursor()
+cs.execute("CREATE TABLE IF NOT EXISTS geekstudent (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, label VARCHAR(200));")
+statement = "INSERT INTO geekstudent(label) VALUES('Shoit')"
+cs.execute(statement)
+mydb.commit()
+print(cs.rowcount, " record(s) added")
+print(cs.lastrowid)
+exit()
+
+
+
+
+
+
+
+
+
 #### Let's import a json module so we can create JSON strings from our data later:
 import json
 
@@ -22,9 +48,15 @@ cursor = cnx.cursor()
 
 ## Create a table to mess with:
 cursor.execute("CREATE TABLE IF NOT EXISTS testable (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, label VARCHAR(200));")
-## Insert a couple of labels into it:
-cursor.execute("INSERT INTO testable (label) VALUES ('A'), ('B'), ('C');")
 
+## Insert a label into it:
+cursor.execute("INSERT INTO testable (label) VALUES ('A');")
+## Commit our change so we get a lastrowid in the cursor
+cnx.commit()
+print("Inserted Row was given auto-ID", print(cursor.lastrowid))
+
+## Insert a couple more values:
+cursor.execute("INSERT INTO testable (label) VALUES ('B'), ('C');")
 ## Quickly output all those things we selected:
 cursor.execute("SELECT * FROM testable;")
 for row in cursor:
