@@ -23,8 +23,9 @@ import pandas as pd
 
 ## This reads in our excel file:
 df = pd.read_excel("myfile.xlsx", header=0).fillna('')
-## This would output the first few rows of what we just read in:
-print(df.head())
+## This would output the first few rows of what we just read in.
+## We'll print all 6:
+print(df.head(6))
 
 ## Let's create dictionaries for our unique patients and medications.
 ## We'll key them by the ssn and medication name, respectively
