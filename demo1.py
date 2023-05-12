@@ -17,14 +17,14 @@ dbconn = mysql.connector.connect(user=cfg["db"]["user"],
 ## This creates a cursor that can run queries against your db connection:
 cursor = dbconn.cursor()
 
-
-
-
+## We're going to use the json and pandas libraries for some data and output stuff:
 import json
 import pandas as pd
 
+## This reads in our excel file:
 df = pd.read_excel("myfile.xlsx", header=0).fillna('')
-#print(df.head())
+## This would output the first few rows of what we just read in:
+print(df.head())
 
 ## Let's create dictionaries for our unique patients and medications.
 ## We'll key them by the ssn and medication name, respectively
