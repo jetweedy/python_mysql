@@ -36,11 +36,11 @@ https://docs.devart.com/odbc/mysql/python.htm
 
 # Using MySQL on Docker:
 
-## Install <a href="">Docker Desktop</a>
-
-## When you go to run 
-```
-MYSQL_ROOT_PASSWORD=root
-```
+1. Install <a href="https://www.docker.com/products/docker-desktop/" target="_blank">Docker Desktop</a>
+2. After opening, look for the Magnifying Glass Search Button at the top.
+3. Look for 'mysql'. A standard image should come up at the top.
+4. Click the Run button (triangle pointing right)
+5. Before running, click Optional Settings, and set a MYSQL_ROOT_PASSWORD of your choise (e.g. 'root') under Environment Variables
+    
 
 
