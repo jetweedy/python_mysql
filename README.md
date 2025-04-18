@@ -41,6 +41,18 @@ https://docs.devart.com/odbc/mysql/python.htm
 3. Look for 'mysql'. A standard image should come up at the top.
 4. Click the Run button (triangle pointing right)
 5. Before running, click Optional Settings, and set a MYSQL_ROOT_PASSWORD of your choise (e.g. 'root') under Environment Variables
-    
-
+6. Also make sure to enter something like 3306 for your port in that options section.
+7. Click to continue, and it should start up.
+8. Now you can connect using something like MySQL Workbenchusing the following credentials:
+```
+   Host: localhost (or 127.0.0.1)
+   Port: 3306 (or whatever you set)
+   Username: root
+   Password: root (or whatever you picked)
+```
+9. Create a database in MySQL Workbench. For example:
+```
+CREATE DATABASE sample1;
+```
+10. Now you'll have a database to connect to in something like Python. :)
 
