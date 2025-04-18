@@ -1,6 +1,9 @@
 # python_mysql
 Some starter tools for connecting to MySQL using Python
 
+## Get Access to a MySQL Database
+If you don't have an existing option, then you can use something like Docker Desktop to run it in a container. There are some quick instructions for that at the bottom.
+
 ## Fork/Clone this repository
 You won't be able to push code up to it, so you'll probably want to fork your own copy and play with it there.
 
@@ -27,4 +30,17 @@ It should create a table, insert some rows, delete a row, read the remaining row
 This is another tool you can use, but may require installing an additional MySQL ODBC driver:
 
 https://docs.devart.com/odbc/mysql/python.htm
+
+
+--------------------------------------------------------
+
+# Using MySQL on Docker:
+
+## Install <a href="">Docker Desktop</a>
+
+## When you go to run 
+```
+MYSQL_ROOT_PASSWORD=root
+```
+
 
